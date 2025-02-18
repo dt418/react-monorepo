@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         node-version: [20]
-        pnpm-version: [10.3.0]  # Add pnpm to matrix
+        pnpm-version: [10.3.0] # Add pnpm to matrix
 
     steps:
       - uses: actions/checkout@v4
