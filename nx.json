@@ -14,7 +14,7 @@
     ],
     "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
-  "nxCloudId": "676eb5c0ab077340d9ae0ca5",
+  "nxCloudId": "67b49254dcc3cecb27ff0abe",
   "plugins": [
     {
       "plugin": "@nx/vite/plugin",
@@ -47,11 +47,7 @@
       }
     }
   ],
-  "targetDefaults": {
-    "e2e-ci--**/*": {
-      "dependsOn": ["^build"]
-    }
-  },
+  "targetDefaults": { "e2e-ci--**/*": { "dependsOn": ["^build"] } },
   "generators": {
     "@nx/react": {
       "application": {
@@ -60,13 +56,8 @@
         "linter": "eslint",
         "bundler": "vite"
       },
-      "component": {
-        "style": "tailwind"
-      },
-      "library": {
-        "style": "tailwind",
-        "linter": "eslint"
-      }
+      "component": { "style": "tailwind" },
+      "library": { "style": "tailwind", "linter": "eslint" }
     }
   }
 }
