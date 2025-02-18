@@ -14,7 +14,7 @@
     ],
     "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
-  "nxCloudId": "67b49254dcc3cecb27ff0abe",
+  "nxCloudId": "67b4a7fa456c4f6004068361",
   "plugins": [
     {
       "plugin": "@nx/vite/plugin",
@@ -29,29 +29,12 @@
     },
     {
       "plugin": "@nx/eslint/plugin",
-      "options": {
-        "targetName": "lint",
-        "fix": true
-      }
+      "options": { "targetName": "lint", "fix": true }
     },
-    {
-      "plugin": "@nx/playwright/plugin",
-      "options": {
-        "targetName": "e2e"
-      }
-    },
-    {
-      "plugin": "@nx/jest/plugin",
-      "options": {
-        "targetName": "test"
-      }
-    }
+    { "plugin": "@nx/playwright/plugin", "options": { "targetName": "e2e" } },
+    { "plugin": "@nx/jest/plugin", "options": { "targetName": "test" } }
   ],
-  "targetDefaults": {
-    "e2e-ci--**/*": {
-      "dependsOn": ["^build"]
-    }
-  },
+  "targetDefaults": { "e2e-ci--**/*": { "dependsOn": ["^build"] } },
   "generators": {
     "@nx/react": {
       "application": {
@@ -60,13 +43,8 @@
         "linter": "eslint",
         "bundler": "vite"
       },
-      "component": {
-        "style": "tailwind"
-      },
-      "library": {
-        "style": "tailwind",
-        "linter": "eslint"
-      }
+      "component": { "style": "tailwind" },
+      "library": { "style": "tailwind", "linter": "eslint" }
     }
   }
 }
