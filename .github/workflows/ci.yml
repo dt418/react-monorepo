@@ -47,4 +47,4 @@ jobs:
         uses: nrwl/nx-set-shas@v4
 
       - name: Run affected commands
-        run: nx affected --target=lint,test,build,e2e --base=main --head=HEAD
+        run: pnpm nx affected --target=lint,test,build,e2e --base=main --head=HEAD
