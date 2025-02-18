@@ -27,9 +27,25 @@
         "typecheckTargetName": "typecheck"
       }
     },
-    { "plugin": "@nx/eslint/plugin", "options": { "targetName": "lint" } },
-    { "plugin": "@nx/playwright/plugin", "options": { "targetName": "e2e" } },
-    { "plugin": "@nx/jest/plugin", "options": { "targetName": "test" } }
+    {
+      "plugin": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint",
+        "fix": true
+      }
+    },
+    {
+      "plugin": "@nx/playwright/plugin",
+      "options": {
+        "targetName": "e2e"
+      }
+    },
+    {
+      "plugin": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
+      }
+    }
   ],
   "targetDefaults": { "e2e-ci--**/*": { "dependsOn": ["^build"] } },
   "generators": {
