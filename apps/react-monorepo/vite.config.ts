@@ -4,13 +4,13 @@ import react from '@vitejs/plugin-react';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
 import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+import { dirname, resolve } from 'path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   root: __dirname,
-  cacheDir: '../../node_modules/.vite/apps/react-monorepo',
+  cacheDir: resolve(__dirname, '../../node_modules/.vite/apps/react-monorepo'),
   server: {
     port: 4200,
     host: 'localhost',
@@ -25,7 +25,7 @@ export default defineConfig({
   //  plugins: [ nxViteTsPaths() ],
   // },
   build: {
-    outDir: '../../dist/apps/react-monorepo',
+    outDir: resolve(__dirname, '../../dist/apps/react-monorepo'),
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
