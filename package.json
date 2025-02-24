@@ -2,9 +2,7 @@
   "name": "@react-monorepo/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {
-    "prepare": "lefthook install"
-  },
+  "scripts": {},
   "private": true,
   "dependencies": {
     "react": "18.3.1",
